@@ -80,3 +80,6 @@ logs/
 # Old nested project structure (exclude)
 study_hero_project Main/study_hero_project Main/
 
+# Deployment
+.vercel
+.railway

@@ -6,9 +6,24 @@ require('dotenv').config();
 
 const app = express();
 
+// CORS Configuration
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || (process.env.NODE_ENV === 'production' 
+    ? process.env.FRONTEND_URL 
+    : 'http://localhost:3000'),
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+// Allow all origins in development, specific origin in production
+if (process.env.NODE_ENV !== 'production') {
+  corsOptions.origin = true; // Allow all origins in development
+}
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Import routes
 const userRoutes = require('./src/routes/userRoutes');

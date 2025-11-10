@@ -1,0 +1,56 @@
+# Render Blueprint for Study Hero Full Stack
+services:
+  # Backend Service
+  - type: web
+    name: study-hero-backend
+    env: node
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 3306
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: CODE_EXEC_PROVIDER
+        value: judge0
+      - key: JUDGE0_BASE_URL
+        value: https://judge0-ce.p.rapidapi.com
+      - key: JUDGE0_USE_RAPIDAPI
+        value: "true"
+      - key: JUDGE0_RAPIDAPI_KEY
+        sync: false
+      - key: PYTHON_PATH
+        value: python3
+
+  # Frontend Service
+  - type: web
+    name: study-hero-frontend
+    env: static
+    region: oregon
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false
+
