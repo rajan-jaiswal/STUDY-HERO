@@ -77,3 +77,6 @@ frontend/.env.production.local
 logs/
 *.log
 
+# Old nested project structure (exclude)
+study_hero_project Main/study_hero_project Main/
+
