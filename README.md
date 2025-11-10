@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # STUDY HERO
 
 An educational platform that connects teachers and students, providing a comprehensive learning management system with quiz generation, assignments, course management, and AI-powered features.
@@ -291,3 +292,6 @@ For support, email your-email@example.com or open an issue in the GitHub reposit
 
 ⭐ If you like this project, please give it a star on GitHub!
 
+=======
+# STUDY-HERO
+>>>>>>> c672707525ce4a65221e13094f766f794f9add4f
