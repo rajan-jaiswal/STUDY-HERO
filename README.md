@@ -291,7 +291,3 @@ For support, email your-email@example.com or open an issue in the GitHub reposit
 ---
 
 ⭐ If you like this project, please give it a star on GitHub!
-
-=======
-# STUDY-HERO
->>>>>>> c672707525ce4a65221e13094f766f794f9add4f
